@@ -1,0 +1,4 @@
+RA 47/2021,Davor,Homa,9.66
+RA 11/2021,Akos,Kis,8.68
+E2 53/2025,Davor,Homa,0
+hello,halo,opa,8.66

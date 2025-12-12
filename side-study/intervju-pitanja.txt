@@ -1,0 +1,100 @@
+Kako bi implementirao metodu za zamenu vrednosti između dve promenljive u programskom jeziku po izboru?
+Koje su moguće greške prilikom zamene vrednosti između dve promenljive?
+Kako možeš da optimizuješ kod za zamenu vrednosti dve promenljive?
+Da li možeš da objasniš prednosti i mane korišćenja third-party biblioteka za jednostavne operacije?
+Možeš li objasniti kako funkcioniše prosleđivanje parametara po referenci u programiranju?
+Koje su prednosti i mane prosleđivanja parametara po referenci u odnosu na prosleđivanje po vrednosti?
+U kojim situacijama bi koristio prosleđivanje po referenci umesto prosleđivanja po vrednosti?
+Kako se u jezicima poput C++ i Python razlikuje prosleđivanje parametara po referenci?
+Možeš li da objasniš razliku između overloading-a i overriding-a u objektno-orijentisanom programiranju?
+Kako se overloading razlikuje od overriding u smislu performansi?
+Koje su prednosti i mane korišćenja overloading-a u razvoju softvera?
+Možeš li da navedeš primer u kom bi koristio overriding u razvoju ugrađenog softvera?
+Možeš li da objasniš razliku između smart pointera i unique pointera u C++?
+Kako bi koristio smart pointere za upravljanje dinamički alociranom memorijom u C++?
+Kada bi koristio shared pointer umesto unique pointera?
+Koje su prednosti korišćenja smart pointera umesto običnih pointera?
+Možeš li da objasniš šta je Application Binary Interface (ABI) i zašto je važan u razvoju softvera?
+Kako ABI utiče na kompatibilnost između različitih verzija softvera?
+Koja je razlika između ABI i API?
+Na koji način ABI može uticati na performanse embedded sistema?
+Koliko bajtova zauzima FLOAT tip promenljive u C programskom jeziku?
+Kako C programski jezik obrađuje različite tipove promenljivih?
+Možeš li objasniti razliku između float i double tipova u C?
+Kako se deklaracija i inicijalizacija promenljivih izvodi u C?
+Možeš li da objasniš kako STATIC i VOLATILE funkcionišu u C jeziku?
+Koja je razlika između STATIC i VOLATILE kvalifikatora?
+U kojim situacijama bi koristio STATIC, a u kojim VOLATILE u ugrađenom softveru?
+Kako STATIC i VOLATILE utiču na performanse programa?
+Koliko memorije zauzima određena struktura?
+Kako optimizuješ upotrebu memorije u embedded sistemima?
+Koji alati ili tehnike se koriste za analizu potrošnje memorije?
+Možeš li da objasniš razliku između statičke i dinamičke alokacije memorije?
+Napiši metod u C# koji zamenjuje vrednosti dva broja koristeći pass by reference.
+Kako koristiš delegate u .NET frameworku?
+Možeš li da objasniš razliku između pass by value i pass by reference u C#?
+Kako bi implementirao exception handling u .NET aplikaciji?
+Napiši metod u .NET za vraćanje srednje vrednosti od tri uneta broja.
+Kako biste implementirao metodu za sortiranje niza brojeva u C#?
+Možeš li da objasniš kako funkcioniše error handling u .NET aplikacijama?
+Šta su delegate u .NET-u i kako ih koristiš u razvoju aplikacija?
+Koje su glavne razlike između TCP i UDP protokola?
+Kako TCP protokol osigurava pouzdanost prenosa podataka?
+U kojim slučajevima bi koristio UDP umesto TCP?
+Možeš li objasniti handshake proces kod TCP protokola?
+Možeš li da objasniš šta je ObservableCollection u .NET-u i kako se koristi?
+Kako se ObservableCollection razlikuje od List<T> u .NET-u?
+Koje su prednosti korišćenja ObservableCollection u aplikacijama sa MVVM arhitekturom?
+Kako bi implementirao funkcionalnost za obaveštavanje UI-a o promenama u kolekciji koristeći ObservableCollection?
+Kako bi implementirao FizzBuzz algoritam u JavaScript-u?
+Možeš li objasniti razliku između var, let i const u JavaScript-u?
+Kako bi implementirao funkciju koja proverava da li je broj prost u JavaScript-u?
+Šta su zatvaranja (closures) u JavaScript-u i kako ih koristiš?
+Koja je razlika između include i require u PHP-u?
+Kako PHP reaguje ako include ili require ne može da pronađe fajl?
+Možeš li da objasniš razliku između require_once i include_once?
+Koje su prednosti i mane upotrebe include i require u PHP projektima?
+Koje su osnovne SELECT naredbe u MySQL-u i kako ih koristiš?
+Kako koristiš WHERE klauzulu u MySQL-u da filtriraš rezultate?
+Možeš li objasniti razliku između INNER i LEFT JOIN u MySQL-u?
+Kako optimizuješ složene SELECT upite u MySQL-u?
+Možeš li da objasniš kako se rukuje bitovima u C/C++ i kako primenjuješ OOP koncepte u ovim jezicima?
+Koje su prednosti korišćenja OOP u odnosu na proceduralno programiranje u C++?
+Kako implementiraš nasleđivanje u C++?
+Da li možeš da objasniš razliku između javnog, privatnog i zaštićenog nasledđivanja u C++?
+Koje vrste memorije podržava jezik C i kako se koriste u kontekstu embedded sistema?
+Kako razlikuješ RAM i ROM u okviru embedded sistema?
+Možeš li objasniti razliku između stack i heap memorije?
+Kako menjaš veličinu stack memorije u embedded sistemu i zašto bi to radio?
+Koji su najčešći izazovi sa kojima se susrećeš kada radiš sa nizovima, pokazivačima i strukturama?
+Kako bi implementirao dvodimenzionalni niz pomoću pokazivača?
+Možeš li objasniti razliku između statičkih i dinamičkih struktura podataka?
+Kako pristupaš debagovanju problema koji se javljaju u radu sa pokazivačima?
+Možeš li objasniti razliku između ključnih reči 'static', 'volatile' i 'const' u C programiranju? Da li ima smisla koristiti 'const' zajedno sa 'volatile' i kako se igra sa 'const' i pokazivačima?
+Kako bi implementirao 'volatile' u kodu za upravljanje hardverskim resursima?
+Zašto je važno razumeti upotrebu 'const' u funkcijama koje koriste pokazivače?
+Kako 'static' utiče na vidljivost i životni vek promenljive u C jeziku?
+Možeš li ukratko da objasniš šta su mutex i semaphore, kao i različita stanja task-ova?
+Kako bi se koristio mutex u embedded sistemima?
+Koja je razlika između binary semaphore i counting semaphore?
+Kako se upravlja task-ovima u real-time operativnim sistemima?
+Kako koristiš Git za verzionisanje koda u svojim projektima?
+Kako bi rešio konflikt kada se pojavi prilikom merge-a u Gitu?
+Da li možeš da objasniš razliku između Git pull i Git fetch komandi?
+Koje strategije koristiš prilikom branch-ovanja u Gitu?
+Možeš li da objasniš kako funkcionišu Java kolekcije i kako ih koristiš u funkcionalnom programiranju?
+Koje sve vrste kolekcija postoje u Javi i čemu konkretno služe?
+Kako koristiš stream API u funkcionalnom programiranju u Javi?
+Možeš li da navedeš neku situaciju gde koristiš lambda izraze u Javi?
+Možeš li da objasniš 4 principa OOP?
+Kako bi implementirao nasledjivanje u Java-i?
+Šta je polimorfizam i kako ga koristiš u svojim projektima?
+Možeš li da navedeš razliku između apstrakcije i enkapsulacije?
+Koji su najčešće korišćeni sistemi za upravljanje relacionim bazama podataka?
+Kako bi dizajnirao tabelu u odnosu na relacione baze podataka?
+Možeš li objasniti razliku između primary i foreign ključa u relacionim bazama podataka?
+Kako možeš koristiti Spring Boot za kreiranje RESTful servisa?
+Na koji način Spring upravlja zavisnostima?
+Koje su prednosti korišćenja Spring Boota u projektu?
+Koja je razlika između React Virtual DOM-a i HTML DOM-a? Šta optimizuje React Virtual DOM?
+Kako React koristi Virtual DOM da poboljša performanse aplikacije?

@@ -1,0 +1,16 @@
+[package]
+name = "crate-sample-pdaj"
+version = "0.1.0"
+edition = "2021"
+description = "A sample crate"
+license = "GPL-3.0"
+
+[dependencies]
+
+[[bin]]
+name = "crate-sample-pdaj"
+path = "src/main.rs"
+
+[lib]
+name = "crate_sample"
+path = "src/lib.rs"

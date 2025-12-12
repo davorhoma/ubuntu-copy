@@ -1,0 +1,9 @@
+10110111
+shift >> 1
+01011011 -> 1 ide u dev null (odbacuje se), dok se sa leve strane ubacuje 0
+shift << 1
+10110110 -> sa leve 0 ide u dev null, dok se sa desna ubacuje 0
+
+Predavanja 4
+SIMD nizovi 20/35
+GPU se sastoje od ogromnog broja "glupih" procesora za razliku od CPU. Ovi "glupi" procesori imaju svoju memoriju.
