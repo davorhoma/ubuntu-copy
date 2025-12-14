@@ -1,8 +1,0 @@
-Manchester United,MAN UTD,1878
-Arsenal,ARS,1890
-Everton FC,EVE,1881
-Newcastle United,NEW,1899
-Liverpool FC,LFC,1876
-Chelsea FC,CHE,1896
-Aston Villa FC,AFC,1888
-Tottenham Hotspur,TOT,1899
