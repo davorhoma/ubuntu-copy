@@ -293,7 +293,8 @@ func makeTransaction(bank *Bank) {
 		fmt.Println(account.number)
 	}
 
-	var chosenAccounts []Account
+	// var chosenAccounts []Account
+	chosenAccounts := make([]Account, 0)
 	reader := bufio.NewReader(os.Stdin)
 	for {
 		input, _ := reader.ReadString('\n')
