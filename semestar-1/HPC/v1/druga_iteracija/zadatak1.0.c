@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <omp.h>
 
-#define NUM_THREADS 4
+#define NUM_THREADS 16
 #define PADDING 8
 
 static long num_steps = 100000000;
