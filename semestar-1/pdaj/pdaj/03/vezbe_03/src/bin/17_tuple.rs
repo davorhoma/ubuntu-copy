@@ -13,5 +13,5 @@ fn main() {
 
     let tup = (42, String::from("hello")); // In Rust, tuples will only implement Copy if all of their elements implement Copy. Since String does not implement Copy, the tuple (String, i32) as a whole does not implement Copy
     take_tuple_int_string(tup); // Ownership of the entire tuple (and thus the String inside it) is moved to the function.
-    println!("{}", tup.1); // This doesnt work because `tup` was moved.
+    // println!("{}", tup.1); // This doesnt work because `tup` was moved.
 }

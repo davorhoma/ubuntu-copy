@@ -45,6 +45,11 @@ fn main() {
         Err(e) => println!("Error: {}", e),
     }
 
+    // klasick's code
+    // if let Ok(result) = divide_numbers(10.0, 2.0) {
+    //     println!("10.0 divided by 2.0 is: {}", result);
+    // }
+
     let result = divide_numbers(10.0, 0.0);
     match result {
         Ok(result) => println!("10.0 divided by 0.0 is: {}", result),

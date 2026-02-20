@@ -81,4 +81,8 @@ fn main() {
     let mut user3 = User::build_user(String::from("third@example.com"), String::from("thirdusername123"));
     user3.set_email(String::from("fourth@example.com"));
     println!("User email : {}", user3.get_email());
+
+    // klasick's code
+    // user3.email = "hehe".to_string();
+    // println!("User email : {}", user3.email);
 }
