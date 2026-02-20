@@ -1,0 +1,32 @@
+services:
+  postgresdb:
+    image: postgres:17.7
+    environment:
+      - POSTGRES_PASSWORD=admin
+    volumes:
+      - ./zadatak/data:/var/lib/postrgesql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    ports:
+      - 9000:9000
+    depends_on:
+      postgresdb:
+        condition: service_healthy
+
+  frontend:
+    build: ./frontend
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend/src:/app/src:ro
+    depends_on:
+      - postgresdb
+      - backend
+    # stdin_open: true
+    # tty: true

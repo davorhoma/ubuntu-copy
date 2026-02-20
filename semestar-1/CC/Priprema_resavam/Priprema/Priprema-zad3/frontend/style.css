@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+#app {
+    margin: auto;
+    width: 50%;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#response {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+#dontClick {
+    position: fixed; /* Fixed position */
+    left: 20px;     /* 20px from the right */
+    bottom: 20px;    /* 20px from the bottom */
+    padding: 10px;   
+    background-color: white; /* Red background */
+    color: white;    /* White text */
+    border: none;
+    cursor: pointer;
+}
+#dontClick:hover {
+    background-color: darkred;
+}
+
+#displayImage {
+    position: absolute; /* Positioned absolutely within #app */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+}

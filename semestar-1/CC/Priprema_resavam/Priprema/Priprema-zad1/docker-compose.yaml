@@ -1,0 +1,26 @@
+services:
+  mongodb:
+    image: mongo
+    volumes:
+      - ./zadatak/data:/data/db
+
+  nodejs:
+    build: ./backend
+    volumes:
+      - logs:/app/logs
+      - ./backend:/app
+      - /app/node_modules
+    ports:
+      - 80:80
+    depends_on:
+      - mongodb
+      
+  react:
+    build: ./frontend
+    volumes:
+      - ./frontend/src:/app/src:ro
+    ports:
+      - 3000:3000
+
+volumes:
+  logs:
