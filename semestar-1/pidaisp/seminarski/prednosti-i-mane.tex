@@ -1,0 +1,23 @@
+\section{Prednosti i ograničenja}
+
+Distribuirane glavne knjige zasnovane na usmerenom acikličnom grafu donose značajne prednosti u odnosu na tradicionalne blokčejn arhitekture, ali istovremeno uvode i nove izazove i ograničenja.
+
+\subsection{Prednosti}
+
+Jedna od najistaknutijih prednosti DLT sistema baziranih na DAG-u je povećana skalabilnost i paralelna obrada transakcija. Za razliku od linearnog sekvencijalnog dodavanja blokova u klasičnim blokčejn sistemima, DAG omogućava da više transakcija bude potvrđeno istovremeno, što rezultira znatno većim protokom transakcija u obradi podataka~\cite{DAG in Smart Mobility}. %Ovakav pristup je naročito pogodan za aplikacije sa velikim brojem mikrotransakcija i zahtevima u realnom vremenu, kao što su IoT sistemi i pametne mreže komunikacija.
+
+Pored skalabilnosti, značajnu prednost DAG DLT sistema predstavljaju brza finalizacija transakcija i niska latencija. Ovi sistemi uklanjaju pravilo najdužeg lanca i čekanje na formiranje sledećeg bloka, što omogućava bržu potvrdu transakcija u mreži~\cite{blockeden DAG}.
+
+DAG bazirane DLT sisteme karakteriše visoka energetska efikasnost. Budući da DAG protokoli ne koriste energetski intenzivne konsenzus mehanizme kao što je \textit{Proof-of-Work}, potrošnja energije kod ovih sistema može biti značajno niža, što doprinosi održivosti i mogućnosti rada na uređajima sa ograničenim resursima. Zbog ove osobine, cena transakcija u ovakvim sistemima je često veoma niska ili čak bez ikakvih naknada.~\cite{DAG in Smart Mobility}
+
+Određene DAG arhitekture takođe zadržavaju ili unapređuju decentralizaciju i otpornost na centralizovane kontrolne tačke, jer validacija nije vezana za mali broj rudara ili validatora, već je distribuirana kroz celokupnu mrežu učesnika.
+
+\subsection{Ograničenja}
+
+Uprkos navedenim prednostima, DAG bazirani DLT sistemi suočavaju se sa brojnim izazovima. Jedan od osnovnih problema je kompleksnost konsenzus mehanizma, koja može otežati i dovesti do grešaka u implementaciji, što predstavlja odbojnu tačku programerima i korisnicima sistema~\cite{DAG in Smart Mobility}.
+
+Bezbedonosni rizici, takođe, predstavljaju važan aspekt ograničenja. Zbog svoje strukture, DAG protokoli mogu biti osetljivi na određene napade poput dvostruke potrošnje, \textit{Sybil} napade i mnoge druge ukoliko ne postoje dovoljno snažni mehanizmi zaštite. Ove ranjivosti su identifikovane u više radova kao potenicijalni rizici ako mreža nema dovoljno aktivnih i pouzdanih članova~\cite{blockeden DAG}.
+
+U nekim pristupima se javlja problem centralizacije u ranoj fazi mreže, gde se koriste koordinatorski čvorovi ili drugi centralni elementi kako bi se obezbedila sigurnost pre nego što mreža postane dovoljno velika i decentralizovana~\cite{web3 gate DAG in Technology}. 
+
+Na kraju, nedostatak standardizacije i relativno mladost tehnologije ostavlja manje razvijen skup alata, manju podršku zajednice i testirane implementacije u odnosu na zrele blokčejn sisteme. Ovaj faktor otežava širu prihvaćenost i integraciju sa postojećim sistemima~\cite{difference between DAG and Blockchain}.

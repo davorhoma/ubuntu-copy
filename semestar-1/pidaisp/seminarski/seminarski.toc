@@ -1,0 +1,15 @@
+\babel@toc {serbian}{}\relax 
+\contentsline {section}{\numberline {1}Uvod}{3}{}%
+\contentsline {section}{\numberline {2}Usmereni aciklični graf}{4}{}%
+\contentsline {section}{\numberline {3}DLT kao usmereni aciklični graf}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Struktura DLT-a kao usmerenog acikličnog grafa}{5}{}%
+\contentsline {subsection}{\numberline {3.2}Konsenzus u DAG baziranim DLT sistemima}{5}{}%
+\contentsline {section}{\numberline {4}Primeri sistema}{7}{}%
+\contentsline {subsection}{\numberline {4.1}IOTA}{7}{}%
+\contentsline {subsection}{\numberline {4.2}Hedera}{7}{}%
+\contentsline {subsection}{\numberline {4.3}Nano}{8}{}%
+\contentsline {subsection}{\numberline {4.4}Constellation Network}{8}{}%
+\contentsline {section}{\numberline {5}Prednosti i ograničenja}{10}{}%
+\contentsline {subsection}{\numberline {5.1}Prednosti}{10}{}%
+\contentsline {subsection}{\numberline {5.2}Ograničenja}{10}{}%
+\contentsline {section}{\numberline {6}Zaključak}{11}{}%

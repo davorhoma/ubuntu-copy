@@ -1,0 +1,38 @@
+\section{DLT kao usmereni aciklični graf}
+
+U dosadašnjem delu rada definisane su osnovne karakteristike usmerenog acikličnog grafa i motivacija za korišćenje takve strukture u distribuiranim sistemima. U ovom poglavlju fokus će biti na primeni DAG-a kao organizacione strukture u distribuiranim glavnim knjigama. Biće diskutovano kako DAG utiče na arhitekturu, konsenzus i ponašanje DLT sistema.
+%\colorbox{yellow}{DODATI:~U ODNOSU NA BLOKČEJN}. 
+
+Kod blokčejn baziranih DLT sistema transakcije se grupišu u blokove koji se zatim dodaju u linearnu, sekvencijalnu listu blokova, pri čemu svaki novi blok pokazuje na prethodni kroz kriptografski heš, formirajući neprekinuti lanac podataka. Pre dodavanja novog bloka u lanac, njegova ispravnost se mora potvrditi putem konsenzus mehanizma. Kod protokola kao što su dokaz posla (engl. \textit{Proof-of-Work}) i dokaz uloga (engl. \textit{Proof-of-Stake}), neophodna je saglasnot većine čvorova mreže za validaciju bloka. Ovakva struktura dovodi do ograničenja u pogledu brzine obrade transakcija, jer se novi blok može dodati samo nakon što se prethodni potrvdi~\cite{university mitosis blockchain vs blockDAG}.
+
+Glavni ciljevi korišćenja DAG-a u ovakvim sistema jesu poboljšanje skalabilnosti, brzine i troškova transakcija tradicionalnih blokčejn arhitektura~\cite{blockchain council role of DAG}.
+
+\subsection{Struktura DLT-a kao usmerenog acikličnog grafa}
+
+DLT sistemi bazirani na usmerenom acikličnom grafu razlikuju tri tipa elemenata u grafu: transakcije, događaje i blokove. Transakcija predstavlja osnovnu jedinicu koja menja stanje sistema, događaj služi za razmenu informacija o redosledu i komunikaciji između čvorova, dok blok može objediniti više transakcija~\cite{DAG in Smart Mobility}.
+
+Na osnovu izbora osnovne jedinice reprezentacije, DAG DLT sistemi se dalje dele na \textit{blockless} i \textit{block-based} arhitekture. U prvim sistemima elementi u grafu su pojedinačne transakcije ili događaji koji se neposredno rasprostiru kroz graf, dok u drugim sistemima graf čine blokovi koji zahtevaju dodatno procesiranje od strane određenih čvorova pre dodavanja u graf~\cite{DAG in Smart Mobility}.
+
+Kod DAG DLT sistema svaka transakcija postaje deo grafa i povezuje se sa jednom ili više prethodnih transakcija kako bi se potvrdila njihova validnost i istorija. Ovakav pristup omogućava da se istovremeno više transakcija izvršava i potvrđuje paralelno, rezultujući većim protokom transakcija i znatno kraćim vremenom obrade podataka. Takođe, ovo smanjuje potrebu za posebnim čvorovima koji validiraju transakcije, takozvanih \enquote{rudara}, i omogućava da sama aktivnost učesnika mreže doprinosi grafu. Međutim, u nekim sistemima i dalje postoje specifični čvorovi koji učestvuju u konsenzusu i finalizaciji transakcija~\cite{university mitosis blockchain vs blockDAG}.
+
+%Kod DAG DLT sistema svaka transakcija postaje deo grafa i povezuje se sa jednom ili više prethodnih transakcija kako bi se potvrdila njihova validnost i istorija. Ovakav pristup omogućava da se istovremeno više transakcija izvršava i potvrđuje paralelno, rezultujući većim protokom transakcija i znatno kraćim vremenom obrade podataka~\cite{university mitosis blockchain vs blockDAG}.
+
+%DAG bazirani DLT sistemi doprinose tome da validacija transakcija bude distribuiranija i skalabilnija u odnosu na klasične blokčejn sisteme. Nasuprot blokčejnu, u DAG strukturi, svaka transakcija pri svom unošenju u graf može potvrditi druge transakcije, čime sistem smanjuje potrebu za posebnim čvorovima koji validiraju transakcije, takozvanih \enquote{rudara}, i omogućava da sama aktivnost učesnika mreže doprinosi grafu.
+
+Takođe, kod \textit{Proof-of-Work} blokčejn sistema postoji mogućnost nastanka takozvanog siročad čvora (engl. \textit{orphan block}) koji predstavlja blok koji ne pripada najdužem lancu blokova. Kada više čvorova rudara istovremeno validiraju i pošalju novi blok u mrežu, samo jedan blok je moguće priključiti najdužem lancu, dok će ostali, siročad čvorovi, biti odbačeni, rezultujući viškom potrošnje računarske snage~\cite{investopedia orphan block}. Sa druge strane, kod DAG baziranih DLT sistema ne postoje odbačeni čvorovi usled ovakvih situacija, što doprinosi manjim troškovima transakcija.
+
+Ovakav način organizacije distribuirane glavne knjige omogućava efikasnije korišćenje resursa mreže, brži protok podataka i potencijalno niže troškove transakcija, ali takođe postavlja specifične zahteve za konsenzus algoritme i sigurnosne protokole koji moraju da održe funkcionisanje takve mreže.
+
+\subsection{Konsenzus u DAG baziranim DLT sistemima}
+
+U distribuiranim glavnim knjigama konsenzus predstavlja mehanizam kojim se usaglašava zajedničko stanje sistema među decentralizovanim čvorovima, to jest, način na koji se postiže dogovor o validnim transakcijama i njihovom redosledu. U tradicionalnim blokčejn sistemima, kosenzus se oslanjao na sekvencijalno dodavanje blokova uz pomoć protokola kao što su \textit{Proof-of-Work} ili \textit{Proof-of-Stake}, ali ove metode nisu pogodne za podatke koji nisu strukturirani kao linearan lanac blokova. DAG bazirani DLT sistemi zahtevaju konsenzus protokole koji omogućuju paralelno vršenje i dodavanje transakcija u mrežu~\cite{blockeden DAG}. %U nastavku će biti prikazano nekoliko pristupa rešavanju ovih problema.
+
+Osnovni cilj konsenzus mehanizama u DAG baziranim sistemima jeste da obezbede jedinstven i konzistentan pogled na istoriju transakcija, kao i da spreče konflikte poput dvostruke potrošnje (engl. \textit{double spending}), uprkos viosokom stepenu paralelizma. Umesto sekvencijalnog potvrđivanja transakcija, konsenzus se u ovim sistemima često postiže akumulacijom potvrda ili glasova kroz samo strukturu grafa, gde nove transakcije potvrđuju prethodne~\cite{DAG in Smart Mobility}.
+
+Jedan od ključnih principa kod mnogih DAG baziranih DLT sistema jeste da učesnici mreže, prilikom dodavanja nove transakcije u graf, preuzimaju deo odgovornosti za validaciju postojećih transakcija. Na taj način, proces validacije postaje distribuiran između svih aktivnih čvorova, a ne centralizovan oko nekoliko rudara ili validatora, kao što je to slučaj kod \textit{Proof-of-Work} ili \textit{Proof-of-Stake} sistema.
+
+Konsenzus u DAG sistemima se može ostvariti na različite načine, u zavisnosti od konkretne implementacije. Kod nekih sistema, čvorovi probabilistički potvrđuju transakcije, a njihova verovatnoća konačne potvrde raste sa brojem potvrda. Drugi sistemi koriste mehanizme glasanja, gde određeni čvorovi imaju pravo da učestvuju u donošenju odluka o validnosti i redosledu transakcija, pri čemu težina njihovog glasa može zavisiti od različitih kriterijuma, kao što je količina uloženih sredstava ili reputacija u mreži.
+
+Konsenzus mehanizmi kod DAG baziranih DLT sistema često teže eliminaciji energetskih troškova karakterističnih za \textit{Proof-of-Work} protokole, kao i smanjenju latencije u potvrđivanju transakcija. Međutim, ovakav pristup uvodi nove izazove, posebno u pogledu bezbednosti mreže, otpornosti na zlonamerne učesnike, takozvane vizantijske otkaze, i potrebe za dodatnim mehanizmima koji sprečavaju manipulaciju grafom u uslovima niskog mrežnog opterećenja~\cite{DAG in Smart Mobility}.
+
+Zbog navedenih razlika, konsenzus u DAG baziranim DLT sistemima predstavlja aktivno istraživačko polje, sa različitim predloženim modelima i implementacijama. Konkretni primeri ovih mehanizama i sistema koji ih koriste biće detaljnije razmotreni u narednom poglavlju rada.

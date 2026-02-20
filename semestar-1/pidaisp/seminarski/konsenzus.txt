@@ -1,0 +1,13 @@
+3.2. Konsenzus u DAG baziranim DLT sistemima
+
+Za razliku od klasičnih blokčejn sistema, u kojima se konsenzus postiže nad linearnim redosledom blokova, DAG bazirani DLT sistemi zahtevaju drugačiji pristup postizanju dogovora između učesnika mreže. Razlog za to leži u samoj strukturi usmerenog acikličnog grafa, gde se više transakcija može istovremeno dodavati i potvrđivati paralelno, bez postojanja jedinstvenog globalnog lanca blokova.
+
+Osnovni cilj konsenzus mehanizama u DAG baziranim sistemima jeste da obezbede jedinstven i konzistentan pogled na istoriju transakcija, kao i da spreče konflikte poput dvostruke potrošnje, uprkos visokom stepenu paralelizma. Umesto sekvencijalnog potvrđivanja blokova, konsenzus se u ovim sistemima često postiže akumulacijom potvrda ili glasova kroz samu strukturu grafa, gde nove transakcije implicitno ili eksplicitno potvrđuju prethodne [7].
+
+Jedan od ključnih principa kod mnogih DAG baziranih DLT sistema jeste da učesnici mreže, prilikom dodavanja nove transakcije u graf, preuzimaju deo odgovornosti za validaciju postojećih transakcija. Na taj način, proces validacije postaje distribuiran među svim aktivnim čvorovima, a ne centralizovan oko ograničenog broja rudara ili validatora, kao što je to slučaj kod tradicionalnih Proof-of-Work ili Proof-of-Stake sistema. Ovakav pristup omogućava bolju skalabilnost i smanjenje zagušenja mreže pri povećanom broju transakcija [8].
+
+Konsenzus u DAG sistemima se može ostvariti na različite načine, u zavisnosti od konkretne implementacije. Neki sistemi se oslanjaju na probabilističke metode, gde se verovatnoća konačne potvrde transakcije povećava kako ona dobija više indirektnih potvrda u grafu. Drugi sistemi koriste mehanizme glasanja, gde određeni čvorovi ili skupovi čvorova imaju pravo da učestvuju u donošenju odluka o validnosti i redosledu transakcija, pri čemu se težina njihovog glasa može zasnivati na različitim kriterijumima, poput uloženih sredstava ili reputacije u mreži [9].
+
+Važno je istaći da DAG bazirani konsenzus mehanizmi često teže eliminaciji energetskih troškova karakterističnih za Proof-of-Work protokole, kao i smanjenju latencije u potvrđivanju transakcija. Međutim, ovakav pristup uvodi nove izazove, posebno u pogledu bezbednosti mreže, otpornosti na zlonamerne učesnike i potrebe za dodatnim mehanizmima koji sprečavaju manipulaciju grafom u uslovima niskog mrežnog opterećenja [10].
+
+Zbog navedenih razlika, konsenzus u DAG baziranim DLT sistemima predstavlja aktivno istraživačko polje, sa različitim predloženim modelima i implementacijama. Konkretni primeri ovih mehanizama, kao što su Hashgraph ili sistemi zasnovani na delegiranom glasanju, biće detaljnije razmotreni u narednom poglavlju rada.
